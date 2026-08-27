@@ -1,1 +1,3 @@
 # Tugas-Game-Ms-Shinta
+Untuk kendala sebenarnya gada ms, paling masih pusing di codenya aja, mungkin bisa dijelasin tentang codenya lebih lanjut, kalau buat nambahin sprite, tile, sound, dll insyaallah sudah pahan :>
+Segitu aja si ms...
