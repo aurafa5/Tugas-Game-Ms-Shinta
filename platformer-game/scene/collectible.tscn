@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dk2qbmudpip2d"]
+
+[ext_resource type="Script" uid="uid://dy6tnih0su426" path="res://scripts/collectible.gd" id="1_85dlb"]
+[ext_resource type="Texture2D" uid="uid://cos5htthp6n3u" path="res://assets/images/Coin/New Piskel.png" id="1_xmg6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85dlb"]
+atlas = ExtResource("1_xmg6v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2je3v"]
+atlas = ExtResource("1_xmg6v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3op07"]
+atlas = ExtResource("1_xmg6v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82emf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85dlb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2je3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3op07")
+}],
+"loop": 1,
+"name": &"koin",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0q44"]
+size = Vector2(42, 51)
+
+[node name="Collectible" type="Area2D" unique_id=1801506751]
+script = ExtResource("1_85dlb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2104067472]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_82emf")
+animation = &"koin"
+frame_progress = 0.20876007
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=674077239]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_s0q44")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,7 +1,23 @@
 [gd_scene format=3 uid="uid://bvscrr4agfa5y"]
 
 [ext_resource type="PackedScene" uid="uid://bgnf76pmphvvj" path="res://scene/levels/level1.tscn" id="1_itxqv"]
+[ext_resource type="Script" uid="uid://6myegyt7luyq" path="res://scripts/main.gd" id="1_v0l8b"]
 
 [node name="main" type="Node2D" unique_id=1464317676]
+script = ExtResource("1_v0l8b")
 
 [node name="LevelRoot" parent="." unique_id=318670295 instance=ExtResource("1_itxqv")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=893764541]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1625125738]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 230.0
+offset_bottom = 90.0
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/Panel" unique_id=700946935]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
