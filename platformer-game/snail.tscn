@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mti6b"]
-size = Vector2(42, 72)
+size = Vector2(25, 47)
 
 [node name="Snail" type="Area2D" unique_id=130787333]
 script = ExtResource("1_kwcx3")
@@ -48,7 +48,7 @@ script = ExtResource("1_kwcx3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=899209221]
 texture_filter = 1
 position = Vector2(0, 3.8146973e-06)
-scale = Vector2(0.15, 0.161)
+scale = Vector2(0.1, 0.108)
 sprite_frames = SubResource("SpriteFrames_4kxuq")
 animation = &"Enemies"
 autoplay = "Enemies"
@@ -56,7 +56,7 @@ frame_progress = 0.09008618
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573763185]
-position = Vector2(-2, 0)
+position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_mti6b")
 
 [node name="Timer" type="Timer" parent="." unique_id=1067571297]

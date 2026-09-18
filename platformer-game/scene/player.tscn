@@ -254,7 +254,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hs0m"]
-size = Vector2(37, 68.333336)
+size = Vector2(34, 66)
 
 [node name="Player" type="CharacterBody2D" unique_id=802448342]
 script = ExtResource("1_hp4bs")
@@ -262,12 +262,13 @@ script = ExtResource("1_hp4bs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1254914629]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4kxuq")
-animation = &"died"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479894557]
-position = Vector2(-15.5, 30)
+position = Vector2(0, 31)
 shape = SubResource("RectangleShape2D_2hs0m")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=505245781]
+position = Vector2(-1, 30)
 stream = ExtResource("7_34jf3")
